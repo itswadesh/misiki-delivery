@@ -47,8 +47,8 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import { Header } from '~/../shared/components'
-import { Button } from '~/../shared/components/ui'
+import { Header } from '~/shared/components'
+import { Button } from '~/shared/components/ui'
 export default {
   async asyncData({ $axios }) {
     let orders = [],

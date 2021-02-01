@@ -8,7 +8,7 @@
       </button>
     </div>-->
     <ApolloQuery
-      :query="require('~/../shared/gql/order/todaysChefs.gql')"
+      :query="require('~/gql/order/todaysChefs.gql')"
       fetchPolicy="no-cache"
     >
       <template v-slot="{ result: { error, data }, isLoading }">
@@ -66,11 +66,11 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import { Header } from '~/../shared/components'
+import { Header } from '~/shared/components'
 const StickyFooter = () => import('~/components/StickyFooter')
 import { RefreshCcwIcon } from 'vue-feather-icons'
-// import todaysChefs from '~/../shared/gql/order/todaysChefs.gql'
-// import todaysStatus from '~/../shared/gql/order/todaysStatus.gql'
+// import todaysChefs from '~/gql/order/todaysChefs.gql'
+// import todaysStatus from '~/gql/order/todaysStatus.gql'
 // import io from "socket.io-client";
 // import { WS_URL } from "~/config";
 // let socket = io(WS_URL);

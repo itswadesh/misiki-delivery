@@ -27,7 +27,7 @@ import {
   Product,
   ListCard,
   Categories,
-} from '~/../shared/components'
+} from '~/shared/components'
 import StickyFooter from '~/components/StickyFooter'
 
 export default {

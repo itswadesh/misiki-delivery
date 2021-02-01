@@ -83,12 +83,12 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import { Header } from '~/../shared/components'
-import { Radio } from '~/../shared/components/ui'
+import { Header } from '~/shared/components'
+import { Radio } from '~/shared/components/ui'
 const StickyFooter = () => import('~/components/StickyFooter')
-import PAYMENT_SUMMARY from '~/../shared/gql/order/delivery.gql'
-import ordersByStatus from '~/../shared/gql/order/ordersByStatus.gql'
-import todaysStatusSummary from '~/../shared/gql/order/todaysStatusSummary.gql'
+import PAYMENT_SUMMARY from '~/gql/order/delivery.gql'
+import ordersByStatus from '~/gql/order/ordersByStatus.gql'
+import todaysStatusSummary from '~/gql/order/todaysStatusSummary.gql'
 import { RefreshCcwIcon } from 'vue-feather-icons'
 // import io from "socket.io-client";
 // import { WS_URL } from "~/config";

@@ -40,11 +40,11 @@ import {
   Product,
   ListCard,
   Categories,
-} from '~/../shared/components'
+} from '~/shared/components'
 import { ContentLoader } from 'vue-content-loader'
-import { Loading } from '~/../shared/components/ui'
-import { query, infiniteScroll } from '~/../shared/mixins'
-import myProducts from '~/../shared/gql/product/myProducts.gql'
+import { Loading } from '~/shared/components/ui'
+import { query, infiniteScroll } from '~/shared/mixins'
+import myProducts from '~/gql/product/myProducts.gql'
 import { PlusIcon } from 'vue-feather-icons'
 export default {
   middleware: 'isAuth',

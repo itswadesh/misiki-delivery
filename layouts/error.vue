@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import { Error } from '~/../shared/components'
-import { Loading } from '~/../shared/components/ui'
+import { Error } from '~/shared/components'
+import { Loading } from '~/shared/components/ui'
 
 export default {
   props: ['error'],

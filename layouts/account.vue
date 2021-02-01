@@ -15,10 +15,10 @@
 </template>
 
 <script>
-import { Error, Header } from '~/../shared/components'
+import { Error, Header } from '~/shared/components'
 import StickyFooter from '~/components/StickyFooter'
 import AccountMenu from '~/components/AccountMenu'
-import { Loading } from '~/../shared/components/ui'
+import { Loading } from '~/shared/components/ui'
 export default {
   middleware: ['geo'],
   components: { Error, Header, StickyFooter, AccountMenu, Loading },

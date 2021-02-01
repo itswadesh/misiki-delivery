@@ -5,7 +5,7 @@
     </nuxt-link>
     <h3>Payment Details</h3>
     <ApolloQuery
-      :query="require('~/../shared/gql/order/order.gql')"
+      :query="require('~/gql/order/order.gql')"
       :variables="{ id: $route.params.id }"
       :update="(data) => data.order"
     >
@@ -133,11 +133,11 @@
 <script>
 import { mapGetters } from 'vuex'
 const StickyFooter = () => import('~/components/StickyFooter')
-import { Textbox } from '~/../shared/components/ui'
-import { Heading } from '~/../shared/components'
-// import order from '~/../shared/gql/order/order.gql'
-import updateOrder from '~/../shared/gql/order/updateOrder.gql'
-import collectPayment from '~/../shared/gql/pay/collectPayment.gql'
+import { Textbox } from '~/shared/components/ui'
+import { Heading } from '~/shared/components'
+// import order from '~/gql/order/order.gql'
+import updateOrder from '~/gql/order/updateOrder.gql'
+import collectPayment from '~/gql/pay/collectPayment.gql'
 import { ArrowLeftIcon } from 'vue-feather-icons'
 export default {
   middleware: ['isAuth'],

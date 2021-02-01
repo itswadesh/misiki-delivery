@@ -3,7 +3,7 @@
     <div class="min-h-screen">
       <Heading title="Welcome to misiki" />
       <ApolloQuery
-        :query="require('~/../shared/gql/order/deliverySummary.gql')"
+        :query="require('~/gql/order/deliverySummary.gql')"
         class="flex items-center justify-center w-full p-2 bg-blue-100"
       >
         <template v-slot="{ result: { error, data }, query, isLoading }">
@@ -90,7 +90,7 @@
           </div>
         </template>
       </ApolloQuery>
-      <!-- <DeliverySummary :query="require('~/../shared/gql/order/deliverySummary.gql')" /> -->
+      <!-- <DeliverySummary :query="require('~/gql/order/deliverySummary.gql')" /> -->
       <!-- {{todaySummary}}=={{todayTotal}} -->
       <!-- <div v-if="orders">
         <div class="heading" v-if="todaysStatus">
@@ -112,16 +112,16 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { Heading } from '~/../shared/components'
+import { Heading } from '~/shared/components'
 import StickyFooter from '~/components/StickyFooter'
 import DeliverySummary from '~/components/DeliverySummary'
-import pendingOrders from '~/../shared/gql/order/pendingOrders.gql'
-import myToday from '~/../shared/gql/order/myToday.gql'
-import todaysSummary from '~/../shared/gql/order/todaysSummary.gql'
-import todaysStatus from '~/../shared/gql/order/delivery.gql'
-import updateOrder from '~/../shared/gql/order/updateOrder.gql'
-import delivery from '~/../shared/gql/order/delivery.gql'
-// import deliveryOrders from '~/../shared/gql/order/deliveryOrders.gql'
+import pendingOrders from '~/gql/order/pendingOrders.gql'
+import myToday from '~/gql/order/myToday.gql'
+import todaysSummary from '~/gql/order/todaysSummary.gql'
+import todaysStatus from '~/gql/order/delivery.gql'
+import updateOrder from '~/gql/order/updateOrder.gql'
+import delivery from '~/gql/order/delivery.gql'
+// import deliveryOrders from '~/gql/order/deliveryOrders.gql'
 import { RefreshCcwIcon, MapPinIcon, ChevronRightIcon } from 'vue-feather-icons'
 export default {
   middleware: ['isAuth', 'geo'],

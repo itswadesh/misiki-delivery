@@ -51,7 +51,7 @@
   </div>
 </template>
 <script>
-import { Heading, HereMap } from '~/../shared/components'
+import { Heading, HereMap } from '~/shared/components'
 import { CheckIcon, RefreshCcwIcon } from 'vue-feather-icons'
 export default {
   components: { Heading, HereMap, CheckIcon, RefreshCcwIcon },

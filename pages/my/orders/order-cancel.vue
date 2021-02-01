@@ -206,7 +206,7 @@
 </template>
 
 <script>
-import { Checkbox, Radio } from '~/../shared/components/ui'
+import { Checkbox, Radio } from '~/shared/components/ui'
 export default {
   components: { Checkbox, Radio },
   data() {

@@ -68,13 +68,13 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import { Header } from '~/../shared/components'
+import { Header } from '~/shared/components'
 const StickyFooter = () => import('~/components/StickyFooter')
-import myCustomers from '~/../shared/gql/order/myCustomers.gql'
-import myToday from '~/../shared/gql/order/myToday.gql'
-import todaysSummary from '~/../shared/gql/order/todaysSummary.gql'
-import updateOrder from '~/../shared/gql/order/updateOrder.gql'
-import { infiniteScroll } from '~/../shared/mixins'
+import myCustomers from '~/gql/order/myCustomers.gql'
+import myToday from '~/gql/order/myToday.gql'
+import todaysSummary from '~/gql/order/todaysSummary.gql'
+import updateOrder from '~/gql/order/updateOrder.gql'
+import { infiniteScroll } from '~/shared/mixins'
 import { PrinterIcon } from 'vue-feather-icons'
 export default {
   middleware: 'isAuth',

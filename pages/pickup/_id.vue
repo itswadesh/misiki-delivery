@@ -66,10 +66,10 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import { Header } from '~/../shared/components'
+import { Header } from '~/shared/components'
 const StickyFooter = () => import('~/components/StickyFooter')
-import ordersForPickup from '~/../shared/gql/order/ordersForPickup.gql'
-import updateOrder from '~/../shared/gql/order/updateOrder.gql'
+import ordersForPickup from '~/gql/order/ordersForPickup.gql'
+import updateOrder from '~/gql/order/updateOrder.gql'
 import { RefreshCcwIcon } from 'vue-feather-icons'
 // import io from "socket.io-client";
 // import { WS_URL } from "~/config";

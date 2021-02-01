@@ -205,8 +205,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import signOut from '~/../shared/gql/user/signOut.gql'
-// import me from '~/../shared/gql/user/me.gql'
+import signOut from '~/gql/user/signOut.gql'
+// import me from '~/gql/user/me.gql'
 export default {
   data() {
     return {
