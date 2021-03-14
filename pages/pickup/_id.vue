@@ -134,7 +134,7 @@ export default {
             query: ordersForPickup,
             variables: {
               vendor: this.$route.params.id,
-              status: 'Prepared',
+              // status: 'Prepared',
             },
             fetchPolicy: 'no-cache',
           })

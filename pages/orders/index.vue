@@ -6,12 +6,12 @@
       <PrinterIcon />
     </button>
     <div>
-      <div class="flex justify-center text-gray-600 noprint" v-if="todayTotal">
+      <!-- <div class="flex justify-center text-gray-600 noprint" v-if="todayTotal">
         <h2>{{ todayTotal.count }}</h2>
         <h1>{{ todayTotal.total | currency(settings.currency_symbol) }}</h1>
         <div>{{ orders && orders[0] && orders[0].createdAt | date }}</div>
-      </div>
-      <div v-for="s in todaySummary" :key="s._id" class="text-center noprint">
+      </div> -->
+      <!-- <div v-for="s in todaySummary" :key="s._id" class="text-center noprint">
         <span class="font-bold">
           {{ s._id }} *
           <span class="text-xl text-green-500">{{ s.count }}</span> =
@@ -19,7 +19,7 @@
             s.amount | currency(settings.currency_symbol)
           }}</span>
         </span>
-      </div>
+      </div> -->
       <ul class="flex flex-wrap">
         <li
           class="w-full p-4 rounded shadow-2xl lg:w-1/4 xl:w-1/5"
@@ -55,7 +55,6 @@
               </div>
             </ol>
           </ul>
-          <!-- <h3 v-if="o.vendor" class="tracking-wide text-right">{{ o.vendor.restaurant }}</h3> -->
           <div class="text-xs text-right text-cyan-500">
             {{ o.createdAt | date }}
           </div>
@@ -71,8 +70,8 @@ import { mapGetters } from 'vuex'
 import { Header } from '~/shared/components'
 const StickyFooter = () => import('~/components/StickyFooter')
 import myCustomers from '~/gql/order/myCustomers.gql'
-import myToday from '~/gql/order/myToday.gql'
-import todaysSummary from '~/gql/order/todaysSummary.gql'
+// import myToday from '~/gql/order/myToday.gql'
+// import todaysSummary from '~/gql/order/todaysSummary.gql'
 import updateOrder from '~/gql/order/updateOrder.gql'
 import { infiniteScroll } from '~/shared/mixins'
 import { PrinterIcon } from 'vue-feather-icons'
@@ -92,12 +91,12 @@ export default {
   async created() {
     try {
       this.$store.commit('clearErr')
-      this.todayTotal = (
-        await this.$apollo.query({ query: myToday, variables: {} })
-      ).data.myToday
-      this.todaySummary = (
-        await this.$apollo.query({ query: todaysSummary, variables: {} })
-      ).data.todaysSummary
+      // this.todayTotal = (
+      //   await this.$apollo.query({ query: myToday, variables: {} })
+      // ).data.myToday
+      // this.todaySummary = (
+      //   await this.$apollo.query({ query: todaysSummary, variables: {} })
+      // ).data.todaysSummary
       this.orders = (
         await this.$apollo.query({ query: myCustomers, variables: {} })
       ).data.myCustomers.data

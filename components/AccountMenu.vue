@@ -2,29 +2,29 @@
   <div>
     <div
       v-if="user"
-      class="text-center lg:w-1/5 lg:mt-10 bg-white shadow leading-loose w-full p-10 border-b border-gray-200"
+      class="w-full p-10 leading-loose text-center bg-white border-b border-gray-200 shadow lg:w-1/5 lg:mt-10"
     >
       <div class="mb-2">
         <img
           v-if="user.avatar"
-          class="inline-block w-16 h-16 rounded-full object-cover"
+          class="inline-block object-cover w-16 h-16 rounded-full"
           v-lazy="user.avatar"
           alt
         />
         <span
           v-else
-          class="h-20 w-20 p-2 text-4xl text-gray-600 rounded-full bg-gray-200 inline-block"
+          class="inline-block w-20 h-20 p-2 text-4xl text-gray-600 bg-gray-200 rounded-full"
           >{{ user.firstName | first }}</span
         >
       </div>
       <div class="text-lg">{{ user.firstName }} {{ user.lastName }}</div>
       <div class="text-sm text-gray-500">{{ user.phone }}</div>
     </div>
-    <div class="antialiased bg-gray-200 min-h-screen p-8">
+    <div class="min-h-screen p-8 antialiased bg-gray-200">
       <div class="flex justify-center">
-        <nav id="nav" class="w-full relative">
+        <nav id="nav" class="relative w-full">
           <span
-            class="absolute h-10 w-full bg-white rounded-lg shadow ease-out transition-transform transition-medium"
+            class="absolute w-full h-10 transition-transform ease-out bg-white rounded-lg shadow transition-medium"
             :style="{ transform: `translateY(calc(100% * ${selected}))` }"
           ></span>
           <ul class="relative">
@@ -33,11 +33,11 @@
                 type="button"
                 @click="select(0, '/pickup')"
                 :aria-selected="selected === 0"
-                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+                class="flex items-center w-full px-3 py-2 focus:outline-none focus-visible:underline"
               >
                 <svg
                   :class="selected === 0 ? 'text-indigo-400' : 'text-gray-500'"
-                  class="h-6 w-6 transition-all ease-out transition-medium"
+                  class="w-6 h-6 transition-all ease-out transition-medium"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -59,11 +59,11 @@
                 type="button"
                 @click="select(1, '/delivery')"
                 :aria-selected="selected === 1"
-                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+                class="flex items-center w-full px-3 py-2 focus:outline-none focus-visible:underline"
               >
                 <svg
                   :class="selected === 1 ? 'text-indigo-400' : 'text-gray-500'"
-                  class="h-6 w-6 transition-all ease-out transition-medium"
+                  class="w-6 h-6 transition-all ease-out transition-medium"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -85,11 +85,11 @@
                 type="button"
                 @click="select(2, '/my/address')"
                 :aria-selected="selected === 2"
-                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+                class="flex items-center w-full px-3 py-2 focus:outline-none focus-visible:underline"
               >
                 <svg
                   :class="selected === 2 ? 'text-indigo-400' : 'text-gray-500'"
-                  class="h-6 w-6 transition-all ease-out transition-medium"
+                  class="w-6 h-6 transition-all ease-out transition-medium"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -111,11 +111,11 @@
                 type="button"
                 @click="select(3, '/my/profile')"
                 :aria-selected="selected === 3"
-                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+                class="flex items-center w-full px-3 py-2 focus:outline-none focus-visible:underline"
               >
                 <svg
                   :class="selected === 3 ? 'text-indigo-400' : 'text-gray-500'"
-                  class="h-6 w-6 transition-all ease-out transition-medium"
+                  class="w-6 h-6 transition-all ease-out transition-medium"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -142,11 +142,11 @@
                 type="button"
                 @click="select(4, '/reviews')"
                 :aria-selected="selected === 4"
-                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+                class="flex items-center w-full px-3 py-2 focus:outline-none focus-visible:underline"
               >
                 <svg
                   :class="selected === 4 ? 'text-indigo-400' : 'text-gray-500'"
-                  class="h-6 w-6 transition-all ease-out transition-medium"
+                  class="w-6 h-6 transition-all ease-out transition-medium"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -172,10 +172,10 @@
               <button
                 type="button"
                 @click="logout"
-                class="py-2 px-3 w-full flex items-center focus:outline-none focus-visible:underline"
+                class="flex items-center w-full px-3 py-2 focus:outline-none focus-visible:underline"
               >
                 <svg
-                  class="h-6 w-6 transition-all ease-out transition-medium text-gray-500"
+                  class="w-6 h-6 text-gray-500 transition-all ease-out transition-medium"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
@@ -191,7 +191,7 @@
                   />
                 </svg>
                 <span
-                  class="ml-2 text-sm font-medium transition-all text-gray-700 ease-out transition-medium"
+                  class="ml-2 text-sm font-medium text-gray-700 transition-all ease-out transition-medium"
                   >Logout</span
                 >
               </button>
